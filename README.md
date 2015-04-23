@@ -1,0 +1,1 @@
+We need install in our maven local repository TwitterSearchAPI repository. (https://github.com/vjsantojaca/TwitterSearchAPI)
