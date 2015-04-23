@@ -1,0 +1,16 @@
+apply plugin: 'git-dependencies'
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.batcha.gradle.plugins:git-dependencies:0.2'
+    }
+}
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+dependencies{
+	compile('org.tomkdickinson:TwitterSearchAPI:+').ext.git = 'https://github.com/tomkdickinson/TwitterSearchAPI'
+}
