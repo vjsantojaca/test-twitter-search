@@ -1,16 +1,15 @@
-apply plugin: 'git-dependencies'
 apply plugin: 'java'
+apply plugin: 'application'
 
-buildscript {
-    repositories {
+repositories {
         mavenCentral()
-    }
-    dependencies {
-        classpath 'org.batcha.gradle.plugins:git-dependencies:0.2'
-    }
+        mavenLocal()
 }
+
 sourceCompatibility = JavaVersion.VERSION_1_8
 
-dependencies{
-	compile('org.tomkdickinson:TwitterSearchAPI:+').ext.git = 'https://github.com/tomkdickinson/TwitterSearchAPI'
+mainClassName = "package com.relevante.vjsantojaca.twitter.search.Search";
+
+dependencies {
+	compile 'uk.co.tomkdickinson.twitter.search:TwitterSearch:1.0'
 }
